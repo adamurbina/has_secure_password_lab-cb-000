@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
 
+  def new
+    
+  end
+
   def create
       @user = User.create(user_params)
       if @user.save
         redirect_to 'sessions/create'
       else
-        puts ("hello")
+        redirect_to 'new'
       end
   end
 
