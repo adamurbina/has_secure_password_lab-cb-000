@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def create
       @user = User.create(user_params)
       if @user.save
-        redirect 'sessions/create'
+        redirect_to 'sessions/create'
       else
         puts ("hello")
       end
