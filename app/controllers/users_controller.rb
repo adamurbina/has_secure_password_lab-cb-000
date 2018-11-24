@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to 'sessions/create'
       else
-        redirect_to new_user
+        redirect_to new_user_url
       end
   end
 
