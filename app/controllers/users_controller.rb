@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    put "hi #{@user.name}"
+    render 'welcome'
   end
 
   private
