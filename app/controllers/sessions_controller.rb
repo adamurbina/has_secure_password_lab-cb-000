@@ -11,5 +11,5 @@ class SessionsController < ApplicationController
   def sessions_params
     params.require(:user).permit(:name, :password)
   end
-  
+
 end
