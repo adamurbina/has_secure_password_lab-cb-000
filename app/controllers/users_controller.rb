@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
       @user = User.create(user_params)
       if @user.save
-        
+        sessions[:user_id] = @user.id
       else
         redirect_to new_user_url
       end
