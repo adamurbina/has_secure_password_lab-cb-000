@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
   
   def create
-      User.create(user_params)
+      @user = User.create(user_params)
+      if @user.save
+        
+      else
+        puts ("hello")
+      end
   end
 
   private
