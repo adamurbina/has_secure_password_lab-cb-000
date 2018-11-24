@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def create
-      User.create(params)
+      User.create(user_params)
   end
 
   private
 
   
-  
+
 end
