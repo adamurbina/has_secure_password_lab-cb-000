@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
       @user = User.create(user_params)
       if @user.save
-        redirect_to action: 'sessions/create', @user
+        redirect_to action: 'sessions/create', name: @user.name
       else
         redirect_to new_user_url
       end
